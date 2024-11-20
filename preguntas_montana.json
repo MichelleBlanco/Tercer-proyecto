@@ -1,0 +1,162 @@
+[
+    {
+        "pregunta": "22. \u00bfQu\u00e9 monta\u00f1as forman la frontera natural entre Francia y Espa\u00f1a?",
+        "respuesta": "Los Pirineos.",
+        "peso": 1
+    },
+    {
+        "pregunta": "23. \u00bfQu\u00e9 es la aclimataci\u00f3n?",
+        "respuesta": "Adaptaci\u00f3n gradual del cuerpo a la altitud.",
+        "peso": 0
+    },
+    {
+        "pregunta": "24. \u00bfCu\u00e1l es la monta\u00f1a m\u00e1s alta en Am\u00e9rica del Norte?",
+        "respuesta": "Denali (Monte McKinley).",
+        "peso": 0
+    },
+    {
+        "pregunta": "25. \u00bfQu\u00e9 es el 'efecto Foehn' en las monta\u00f1as?",
+        "respuesta": "Un fen\u00f3meno clim\u00e1tico en el que un viento c\u00e1lido y seco desciende por una ladera.",
+        "peso": 0
+    },
+    {
+        "pregunta": "26. \u00bfQu\u00e9 cadena monta\u00f1osa es conocida como la columna vertebral de Am\u00e9rica del Sur?",
+        "respuesta": "Los Andes.",
+        "peso": 0
+    },
+    {
+        "pregunta": "27. \u00bfC\u00f3mo afecta la altitud a la vegetaci\u00f3n en las monta\u00f1as?",
+        "respuesta": "A mayor altitud, menor vegetaci\u00f3n y m\u00e1s plantas adaptadas al fr\u00edo.",
+        "peso": 0
+    },
+    {
+        "pregunta": "28. \u00bfQu\u00e9 es el 'punto de no retorno' en una expedici\u00f3n de monta\u00f1a?",
+        "respuesta": "La altitud o punto donde es riesgoso continuar debido a condiciones f\u00edsicas o clim\u00e1ticas.",
+        "peso": 0
+    },
+    {
+        "pregunta": "29. \u00bfCu\u00e1l es la monta\u00f1a sagrada en la religi\u00f3n tibetana?",
+        "respuesta": "El Monte Kailash.",
+        "peso": 0
+    },
+    {
+        "pregunta": "30. \u00bfQu\u00e9 cordillera es la m\u00e1s joven en t\u00e9rminos geol\u00f3gicos?",
+        "respuesta": "Los Himalayas.",
+        "peso": 0
+    },
+    {
+        "pregunta": "31. \u00bfQu\u00e9 es un 'campo base'?",
+        "respuesta": "Un campamento temporal utilizado para prepararse antes de una escalada importante.",
+        "peso": 0
+    },
+    {
+        "pregunta": "32. \u00bfQu\u00e9 es la 'zona de la muerte' en monta\u00f1ismo?",
+        "respuesta": "Altitudes superiores a los 8,000 metros, donde el ox\u00edgeno es extremadamente bajo.",
+        "peso": 0
+    },
+    {
+        "pregunta": "10. \u00bfQu\u00e9 es el alpinismo?",
+        "respuesta": "El deporte de escalar monta\u00f1as altas.",
+        "peso": 0
+    },
+    {
+        "pregunta": "9. \u00bfC\u00f3mo se llama el efecto que provoca m\u00e1s lluvias en una ladera de la monta\u00f1a que en la otra?",
+        "respuesta": "Efecto orogr\u00e1fico.",
+        "peso": 0
+    },
+    {
+        "pregunta": "7. \u00bfQu\u00e9 tipo de animal es com\u00fan en las monta\u00f1as?",
+        "respuesta": "Cabras montesas.",
+        "peso": 0
+    },
+    {
+        "pregunta": "5. \u00bfC\u00f3mo se llama una cadena de monta\u00f1as?",
+        "respuesta": "Cordillera.",
+        "peso": 0
+    },
+    {
+        "pregunta": "3. \u00bfQu\u00e9 tipo de clima suele haber en la cima de una monta\u00f1a?",
+        "respuesta": "Clima fr\u00edo y a menudo ventoso.",
+        "peso": 0
+    },
+    {
+        "pregunta": "2. \u00bfCu\u00e1l es la monta\u00f1a m\u00e1s alta del mundo?",
+        "respuesta": "El Monte Everest.",
+        "peso": 1
+    },
+    {
+        "pregunta": "1. \u00bfQu\u00e9 es una monta\u00f1a?",
+        "respuesta": "Una elevaci\u00f3n natural del terreno con gran altura.",
+        "peso": 0
+    },
+    {
+        "pregunta": "21. \u00bfQu\u00e9 es un refugio de monta\u00f1a?",
+        "respuesta": "Un lugar para que los monta\u00f1istas descansen y se protejan.",
+        "peso": 1
+    },
+    {
+        "pregunta": "4. \u00bfQu\u00e9 nombre reciben las personas que escalan monta\u00f1as?",
+        "respuesta": "Monta\u00f1istas o alpinistas.",
+        "peso": 1
+    },
+    {
+        "pregunta": "20. \u00bfQu\u00e9 son los glaciares?",
+        "respuesta": "Grandes masas de hielo que se forman en altas monta\u00f1as.",
+        "peso": 1
+    },
+    {
+        "pregunta": "6. \u00bfQu\u00e9 elemento natural es com\u00fan en las zonas monta\u00f1osas altas?",
+        "respuesta": "La nieve.",
+        "peso": 1
+    },
+    {
+        "pregunta": "19. \u00bfQu\u00e9 se necesita para una expedici\u00f3n a una monta\u00f1a alta?",
+        "respuesta": "Equipamiento especializado y experiencia en escalada.",
+        "peso": 1
+    },
+    {
+        "pregunta": "8. \u00bfCu\u00e1l es el deporte de esquiar en monta\u00f1as nevadas?",
+        "respuesta": "Esqu\u00ed alpino.",
+        "peso": 1
+    },
+    {
+        "pregunta": "16. \u00bfC\u00f3mo afecta la altitud a la temperatura?",
+        "respuesta": "A mayor altitud, menor temperatura.",
+        "peso": 2
+    },
+    {
+        "pregunta": "15. \u00bfQu\u00e9 es la altitud?",
+        "respuesta": "Es la altura de un lugar con respecto al nivel del mar.",
+        "peso": 1
+    },
+    {
+        "pregunta": "13. \u00bfQu\u00e9 nombre recibe el punto m\u00e1s alto de una monta\u00f1a?",
+        "respuesta": "Cima o pico.",
+        "peso": 1
+    },
+    {
+        "pregunta": "17. \u00bfQu\u00e9 es el fen\u00f3meno de la hipoxia en las monta\u00f1as?",
+        "respuesta": "Falta de ox\u00edgeno debido a la baja presi\u00f3n en altitudes elevadas.",
+        "peso": 2
+    },
+    {
+        "pregunta": "11. \u00bfCu\u00e1l es la monta\u00f1a m\u00e1s alta de Am\u00e9rica del Sur?",
+        "respuesta": "El Aconcagua.",
+        "peso": 3
+    },
+    {
+        "pregunta": "18. \u00bfCu\u00e1l es la monta\u00f1a m\u00e1s alta en el continente africano?",
+        "respuesta": "El Kilimanjaro.",
+        "peso": 2
+    },
+    {
+        "pregunta": "12. \u00bfC\u00f3mo se forman las monta\u00f1as?",
+        "respuesta": "Por el movimiento y colisi\u00f3n de placas tect\u00f3nicas.",
+        "peso": 3
+    },
+    {
+        "pregunta": "14. \u00bfQu\u00e9 es una meseta?",
+        "respuesta": "Un \u00e1rea elevada con una superficie relativamente plana.",
+        "peso": 3
+    }
+]

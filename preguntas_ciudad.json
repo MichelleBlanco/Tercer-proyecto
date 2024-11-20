@@ -1,0 +1,162 @@
+[
+    {
+        "pregunta": "1. \u00bfQu\u00e9 es una ciudad?",
+        "respuesta": "Un \u00e1rea densamente poblada con edificios y servicios.",
+        "peso": 1
+    },
+    {
+        "pregunta": "2. \u00bfQu\u00e9 es un rascacielos?",
+        "respuesta": "Un edificio muy alto, generalmente en \u00e1reas urbanas.",
+        "peso": 0
+    },
+    {
+        "pregunta": "3. \u00bfQu\u00e9 es el transporte p\u00fablico?",
+        "respuesta": "Sistema de transporte accesible a la poblaci\u00f3n, como autobuses y trenes.",
+        "peso": 0
+    },
+    {
+        "pregunta": "4. \u00bfQu\u00e9 es un parque urbano?",
+        "respuesta": "Un \u00e1rea verde en la ciudad destinada para recreaci\u00f3n.",
+        "peso": 0
+    },
+    {
+        "pregunta": "5. \u00bfQu\u00e9 es una avenida?",
+        "respuesta": "Una calle ancha, a menudo principal en la ciudad.",
+        "peso": 0
+    },
+    {
+        "pregunta": "6. \u00bfQu\u00e9 es una zona residencial?",
+        "respuesta": "Un \u00e1rea de la ciudad donde hay viviendas.",
+        "peso": 0
+    },
+    {
+        "pregunta": "7. \u00bfQu\u00e9 significa 'zona comercial'?",
+        "respuesta": "Un \u00e1rea con tiendas y negocios.",
+        "peso": 0
+    },
+    {
+        "pregunta": "8. \u00bfCu\u00e1l es la capital de Francia?",
+        "respuesta": "Par\u00eds.",
+        "peso": 0
+    },
+    {
+        "pregunta": "9. \u00bfQu\u00e9 es una metr\u00f3poli?",
+        "respuesta": "Una ciudad grande e importante que act\u00faa como centro cultural y econ\u00f3mico.",
+        "peso": 0
+    },
+    {
+        "pregunta": "10. \u00bfQu\u00e9 es un monumento?",
+        "respuesta": "Una estructura construida para conmemorar algo o a alguien.",
+        "peso": 0
+    },
+    {
+        "pregunta": "11. \u00bfCu\u00e1l es la ciudad m\u00e1s poblada del mundo?",
+        "respuesta": "Tokio.",
+        "peso": 0
+    },
+    {
+        "pregunta": "12. \u00bfQu\u00e9 es el casco antiguo de una ciudad?",
+        "respuesta": "La parte hist\u00f3rica y m\u00e1s antigua de una ciudad.",
+        "peso": 0
+    },
+    {
+        "pregunta": "13. \u00bfQu\u00e9 es una zona industrial?",
+        "respuesta": "Un \u00e1rea con f\u00e1bricas y empresas de producci\u00f3n.",
+        "peso": 0
+    },
+    {
+        "pregunta": "14. \u00bfQu\u00e9 es el sistema de alcantarillado?",
+        "respuesta": "La infraestructura que elimina aguas residuales de la ciudad.",
+        "peso": 0
+    },
+    {
+        "pregunta": "15. \u00bfQu\u00e9 es un suburbio?",
+        "respuesta": "Un \u00e1rea residencial a las afueras de una ciudad.",
+        "peso": 0
+    },
+    {
+        "pregunta": "16. \u00bfQu\u00e9 es una megal\u00f3polis?",
+        "respuesta": "Una regi\u00f3n urbana formada por varias ciudades grandes conectadas.",
+        "peso": 0
+    },
+    {
+        "pregunta": "17. \u00bfQu\u00e9 es la urbanizaci\u00f3n?",
+        "respuesta": "El proceso de crecimiento de \u00e1reas urbanas.",
+        "peso": 1
+    },
+    {
+        "pregunta": "18. \u00bfQu\u00e9 ciudad es conocida como 'la Gran Manzana'?",
+        "respuesta": "Nueva York.",
+        "peso": 0
+    },
+    {
+        "pregunta": "19. \u00bfQu\u00e9 es el tr\u00e1fico vehicular?",
+        "respuesta": "La congesti\u00f3n de veh\u00edculos en las calles de una ciudad.",
+        "peso": 0
+    },
+    {
+        "pregunta": "20. \u00bfQu\u00e9 es el 'skyline' de una ciudad?",
+        "respuesta": "La silueta de una ciudad vista a distancia, generalmente con rascacielos.",
+        "peso": 0
+    },
+    {
+        "pregunta": "21. \u00bfQu\u00e9 es una ciudad dormitorio?",
+        "respuesta": "Una ciudad donde la mayor\u00eda de la gente vive pero trabaja en otra.",
+        "peso": 0
+    },
+    {
+        "pregunta": "22. \u00bfQu\u00e9 es el distrito financiero de una ciudad?",
+        "respuesta": "La zona donde se concentran bancos, oficinas y empresas.",
+        "peso": 0
+    },
+    {
+        "pregunta": "23. \u00bfQu\u00e9 es el urbanismo?",
+        "respuesta": "La planificaci\u00f3n y dise\u00f1o de las ciudades.",
+        "peso": 0
+    },
+    {
+        "pregunta": "24. \u00bfQu\u00e9 es un sistema de metro?",
+        "respuesta": "Un tren subterr\u00e1neo o elevado que transporta personas en la ciudad.",
+        "peso": 0
+    },
+    {
+        "pregunta": "25. \u00bfQu\u00e9 es el gentrificaci\u00f3n?",
+        "respuesta": "El proceso en que una zona de la ciudad se revitaliza y se vuelve m\u00e1s cara.",
+        "peso": 1
+    },
+    {
+        "pregunta": "26. \u00bfQu\u00e9 es un distrito hist\u00f3rico?",
+        "respuesta": "Un \u00e1rea protegida por su importancia cultural y arquitect\u00f3nica.",
+        "peso": 0
+    },
+    {
+        "pregunta": "27. \u00bfQu\u00e9 es el urban sprawl?",
+        "respuesta": "La expansi\u00f3n descontrolada de las ciudades hacia \u00e1reas rurales.",
+        "peso": 0
+    },
+    {
+        "pregunta": "28. \u00bfQu\u00e9 es una smart city?",
+        "respuesta": "Una ciudad que usa tecnolog\u00eda para mejorar la eficiencia de los servicios.",
+        "peso": 0
+    },
+    {
+        "pregunta": "29. \u00bfQu\u00e9 significa 'densidad de poblaci\u00f3n'?",
+        "respuesta": "La cantidad de personas que viven en una determinada \u00e1rea.",
+        "peso": 1
+    },
+    {
+        "pregunta": "30. \u00bfQu\u00e9 es una red de ciclov\u00edas?",
+        "respuesta": "Infraestructura dise\u00f1ada para el tr\u00e1nsito seguro de bicicletas.",
+        "peso": 0
+    },
+    {
+        "pregunta": "31. \u00bfQu\u00e9 es el microclima urbano?",
+        "respuesta": "Las condiciones clim\u00e1ticas \u00fanicas en una ciudad, diferentes a las \u00e1reas rurales.",
+        "peso": 1
+    },
+    {
+        "pregunta": "32. \u00bfQu\u00e9 es una 'zona verde' en el contexto urbano?",
+        "respuesta": "\u00c1reas naturales en la ciudad, como parques y jardines.",
+        "peso": 0
+    }
+]

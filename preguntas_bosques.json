@@ -1,0 +1,162 @@
+[
+    {
+        "pregunta": "15. \u00bfQu\u00e9 significa que un bosque sea 'primario'?",
+        "respuesta": "Que no ha sido alterado por actividades humanas.",
+        "peso": 1
+    },
+    {
+        "pregunta": "13. \u00bfQu\u00e9 animal es considerado el 'ingeniero del ecosistema' en los bosques?",
+        "respuesta": "El castor.",
+        "peso": 0
+    },
+    {
+        "pregunta": "20. \u00bfCu\u00e1l es la causa principal de los incendios forestales?",
+        "respuesta": "Actividades humanas y fen\u00f3menos naturales como rayos.",
+        "peso": 0
+    },
+    {
+        "pregunta": "23. \u00bfCu\u00e1l es la regi\u00f3n boscosa m\u00e1s grande del mundo?",
+        "respuesta": "La taiga siberiana.",
+        "peso": 0
+    },
+    {
+        "pregunta": "11. \u00bfQu\u00e9 tipo de bosque tiene cuatro estaciones bien definidas?",
+        "respuesta": "Bosque templado.",
+        "peso": 0
+    },
+    {
+        "pregunta": "10. \u00bfC\u00f3mo se llama la ciencia que estudia los bosques?",
+        "respuesta": "Silvicultura.",
+        "peso": 0
+    },
+    {
+        "pregunta": "7. \u00bfCu\u00e1l es el \u00e1rbol m\u00e1s alto en los bosques de secuoyas?",
+        "respuesta": "La secuoya roja.",
+        "peso": 0
+    },
+    {
+        "pregunta": "8. \u00bfQu\u00e9 nombre recibe un bosque en zonas fr\u00edas?",
+        "respuesta": "Taiga o bosque boreal.",
+        "peso": 0
+    },
+    {
+        "pregunta": "17. \u00bfCu\u00e1l es el porcentaje aproximado de ox\u00edgeno producido por los bosques en la Tierra?",
+        "respuesta": "Alrededor del 28%.",
+        "peso": 0
+    },
+    {
+        "pregunta": "25. \u00bfQu\u00e9 significa 'monocultivo forestal'?",
+        "respuesta": "Plantar solo una especie de \u00e1rbol en una zona de bosque.",
+        "peso": 0
+    },
+    {
+        "pregunta": "26. \u00bfQu\u00e9 es la 'estratificaci\u00f3n vertical' en un bosque?",
+        "respuesta": "Las diferentes capas de vegetaci\u00f3n desde el suelo hasta la copa de los \u00e1rboles.",
+        "peso": 0
+    },
+    {
+        "pregunta": "3. \u00bfCu\u00e1l es el \u00e1rbol m\u00e1s com\u00fan en los bosques tropicales?",
+        "respuesta": "La caoba.",
+        "peso": 0
+    },
+    {
+        "pregunta": "9. \u00bfQu\u00e9 funci\u00f3n cumplen las ra\u00edces de los \u00e1rboles en un bosque?",
+        "respuesta": "Absorben agua y nutrientes y anclan el \u00e1rbol al suelo.",
+        "peso": 0
+    },
+    {
+        "pregunta": "6. \u00bfQu\u00e9 es un depredador en el bosque?",
+        "respuesta": "Un animal que caza a otros para alimentarse.",
+        "peso": 0
+    },
+    {
+        "pregunta": "21. \u00bfQu\u00e9 es el sotobosque en un bosque?",
+        "respuesta": "Es la capa de vegetaci\u00f3n que crece cerca del suelo.",
+        "peso": 0
+    },
+    {
+        "pregunta": "27. \u00bfC\u00f3mo afecta el cambio clim\u00e1tico a los bosques?",
+        "respuesta": "Altera la distribuci\u00f3n de especies, clima y aumenta el riesgo de incendios.",
+        "peso": 0
+    },
+    {
+        "pregunta": "5. \u00bfQu\u00e9 es la fotos\u00edntesis?",
+        "respuesta": "Es el proceso mediante el cual las plantas convierten la luz solar en energ\u00eda.",
+        "peso": 1
+    },
+    {
+        "pregunta": "22. \u00bfQu\u00e9 es un ecosistema forestal?",
+        "respuesta": "Un sistema natural de plantas, animales y microorganismos interdependientes.",
+        "peso": 0
+    },
+    {
+        "pregunta": "12. \u00bfQu\u00e9 es un bosque tropical?",
+        "respuesta": "Un bosque ubicado en zonas c\u00e1lidas y h\u00famedas cerca del ecuador.",
+        "peso": 0
+    },
+    {
+        "pregunta": "2. \u00bfQu\u00e9 tipo de animales suelen vivir en los bosques?",
+        "respuesta": "Mam\u00edferos, aves, insectos, entre otros.",
+        "peso": 0
+    },
+    {
+        "pregunta": "14. \u00bfCu\u00e1l es la diferencia entre una selva y un bosque?",
+        "respuesta": "Las selvas son m\u00e1s densas, con vegetaci\u00f3n y humedad m\u00e1s abundante.",
+        "peso": 0
+    },
+    {
+        "pregunta": "32. \u00bfQu\u00e9 es el 'ciclo del carbono' en un bosque?",
+        "respuesta": "Es el proceso en el cual los \u00e1rboles absorben di\u00f3xido de carbono y lo almacenan como biomasa.",
+        "peso": 0
+    },
+    {
+        "pregunta": "24. \u00bfQu\u00e9 es la biodiversidad en el contexto de un bosque?",
+        "respuesta": "La variedad de especies animales y vegetales que viven en \u00e9l.",
+        "peso": 0
+    },
+    {
+        "pregunta": "31. \u00bfCu\u00e1l es el \u00e1rbol m\u00e1s longevo en los bosques?",
+        "respuesta": "El pino bristlecone, que puede vivir m\u00e1s de 4,000 a\u00f1os.",
+        "peso": 0
+    },
+    {
+        "pregunta": "1. \u00bfQu\u00e9 es un bosque?",
+        "respuesta": "Es un \u00e1rea de tierra cubierta de \u00e1rboles y plantas.",
+        "peso": 1
+    },
+    {
+        "pregunta": "29. \u00bfQu\u00e9 t\u00e9cnica utilizan algunos bosques para recuperarse despu\u00e9s de un incendio?",
+        "respuesta": "La regeneraci\u00f3n natural.",
+        "peso": 0
+    },
+    {
+        "pregunta": "28. \u00bfQu\u00e9 es la fragmentaci\u00f3n de los bosques?",
+        "respuesta": "La divisi\u00f3n de bosques grandes en \u00e1reas m\u00e1s peque\u00f1as y aisladas.",
+        "peso": 0
+    },
+    {
+        "pregunta": "4. \u00bfQu\u00e9 parte del \u00e1rbol produce ox\u00edgeno?",
+        "respuesta": "Las hojas.",
+        "peso": 1
+    },
+    {
+        "pregunta": "18. \u00bfQu\u00e9 tipo de bosque tiene la mayor biodiversidad del mundo?",
+        "respuesta": "La selva amaz\u00f3nica.",
+        "peso": 2
+    },
+    {
+        "pregunta": "16. \u00bfQu\u00e9 nombre reciben los \u00e1rboles que pierden sus hojas en oto\u00f1o?",
+        "respuesta": "\u00c1rboles caducifolios.",
+        "peso": 1
+    },
+    {
+        "pregunta": "30. \u00bfQu\u00e9 efecto tienen los hongos micorr\u00edzicos en los \u00e1rboles?",
+        "respuesta": "Ayudan a los \u00e1rboles a absorber nutrientes y agua.",
+        "peso": 2
+    },
+    {
+        "pregunta": "19. \u00bfQu\u00e9 es la deforestaci\u00f3n?",
+        "respuesta": "Es la tala masiva de \u00e1rboles, eliminando \u00e1reas de bosque.",
+        "peso": 1
+    }
+]

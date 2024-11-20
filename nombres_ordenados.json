@@ -1,0 +1,17 @@
+[
+    {
+        "nombre": "Ana",
+        "correctas": 3,
+        "incorrectas": 2
+    },
+    {
+        "nombre": "Maria",
+        "correctas": 2,
+        "incorrectas": 3
+    },
+    {
+        "nombre": "Carlos",
+        "correctas": 1,
+        "incorrectas": 4
+    }
+]

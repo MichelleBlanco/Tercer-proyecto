@@ -1,0 +1,162 @@
+[
+    {
+        "pregunta": "1. \u00bfCu\u00e1l es el planeta m\u00e1s cercano al Sol?",
+        "respuesta": "Mercurio.",
+        "peso": 0
+    },
+    {
+        "pregunta": "2. \u00bfC\u00f3mo se llama nuestro sistema solar?",
+        "respuesta": "Sistema Solar.",
+        "peso": 0
+    },
+    {
+        "pregunta": "3. \u00bfQu\u00e9 es una estrella?",
+        "respuesta": "Una bola de gas caliente que emite luz y calor.",
+        "peso": 0
+    },
+    {
+        "pregunta": "4. \u00bfCu\u00e1ntos planetas hay en nuestro sistema solar?",
+        "respuesta": "Ocho.",
+        "peso": 0
+    },
+    {
+        "pregunta": "5. \u00bfCu\u00e1l es el planeta m\u00e1s grande del sistema solar?",
+        "respuesta": "J\u00fapiter.",
+        "peso": 0
+    },
+    {
+        "pregunta": "6. \u00bfQu\u00e9 es la Luna?",
+        "respuesta": "El sat\u00e9lite natural de la Tierra.",
+        "peso": 0
+    },
+    {
+        "pregunta": "7. \u00bfQu\u00e9 planeta es conocido como el planeta rojo?",
+        "respuesta": "Marte.",
+        "peso": 0
+    },
+    {
+        "pregunta": "8. \u00bfQu\u00e9 es un cometa?",
+        "respuesta": "Un cuerpo celeste de hielo y polvo que tiene una cola cuando se acerca al Sol.",
+        "peso": 0
+    },
+    {
+        "pregunta": "9. \u00bfCu\u00e1l es el nombre de la galaxia donde se encuentra la Tierra?",
+        "respuesta": "V\u00eda L\u00e1ctea.",
+        "peso": 0
+    },
+    {
+        "pregunta": "10. \u00bfQui\u00e9n fue la primera persona en viajar al espacio?",
+        "respuesta": "Yuri Gagarin.",
+        "peso": 0
+    },
+    {
+        "pregunta": "11. \u00bfC\u00f3mo se llama el telescopio que orbita la Tierra?",
+        "respuesta": "Telescopio Hubble.",
+        "peso": 0
+    },
+    {
+        "pregunta": "12. \u00bfQu\u00e9 planeta tiene anillos visibles desde la Tierra?",
+        "respuesta": "Saturno.",
+        "peso": 0
+    },
+    {
+        "pregunta": "13. \u00bfQu\u00e9 es una constelaci\u00f3n?",
+        "respuesta": "Un grupo de estrellas que forman una figura en el cielo.",
+        "peso": 0
+    },
+    {
+        "pregunta": "14. \u00bfCu\u00e1l es el planeta m\u00e1s caliente del sistema solar?",
+        "respuesta": "Venus.",
+        "peso": 0
+    },
+    {
+        "pregunta": "15. \u00bfCu\u00e1nto tiempo tarda la luz del Sol en llegar a la Tierra?",
+        "respuesta": "Aproximadamente 8 minutos.",
+        "peso": 0
+    },
+    {
+        "pregunta": "16. \u00bfQu\u00e9 es un agujero negro?",
+        "respuesta": "Una regi\u00f3n del espacio donde la gravedad es tan fuerte que ni la luz puede escapar.",
+        "peso": 0
+    },
+    {
+        "pregunta": "17. \u00bfQu\u00e9 es la V\u00eda L\u00e1ctea?",
+        "respuesta": "La galaxia en la que se encuentra nuestro sistema solar.",
+        "peso": 0
+    },
+    {
+        "pregunta": "18. \u00bfQu\u00e9 es una supernova?",
+        "respuesta": "Una explosi\u00f3n de una estrella al final de su vida.",
+        "peso": 0
+    },
+    {
+        "pregunta": "19. \u00bfQu\u00e9 planeta tiene el d\u00eda m\u00e1s largo del sistema solar?",
+        "respuesta": "Venus.",
+        "peso": 0
+    },
+    {
+        "pregunta": "20. \u00bfCu\u00e1l es el planeta con mayor n\u00famero de lunas conocidas?",
+        "respuesta": "Saturno.",
+        "peso": 0
+    },
+    {
+        "pregunta": "21. \u00bfQu\u00e9 es una nebulosa?",
+        "respuesta": "Una nube de gas y polvo en el espacio donde nacen nuevas estrellas.",
+        "peso": 0
+    },
+    {
+        "pregunta": "22. \u00bfQu\u00e9 son los exoplanetas?",
+        "respuesta": "Planetas que orbitan estrellas fuera de nuestro sistema solar.",
+        "peso": 0
+    },
+    {
+        "pregunta": "23. \u00bfC\u00f3mo se llama el cintur\u00f3n de asteroides entre Marte y J\u00fapiter?",
+        "respuesta": "Cintur\u00f3n de Asteroides.",
+        "peso": 0
+    },
+    {
+        "pregunta": "24. \u00bfQui\u00e9n fue el primer ser humano en pisar la Luna?",
+        "respuesta": "Neil Armstrong.",
+        "peso": 0
+    },
+    {
+        "pregunta": "25. \u00bfQu\u00e9 es la Paradoja de Fermi?",
+        "respuesta": "Una teor\u00eda sobre la aparente contradicci\u00f3n de no encontrar vida extraterrestre pese a la inmensidad del universo.",
+        "peso": 0
+    },
+    {
+        "pregunta": "26. \u00bfQu\u00e9 es el 'Big Bang'?",
+        "respuesta": "La teor\u00eda sobre el origen del universo, una gran explosi\u00f3n que cre\u00f3 el tiempo y el espacio.",
+        "peso": 0
+    },
+    {
+        "pregunta": "27. \u00bfQu\u00e9 es una enana blanca?",
+        "respuesta": "Un remanente de estrella peque\u00f1a y densa despu\u00e9s de una supernova.",
+        "peso": 0
+    },
+    {
+        "pregunta": "28. \u00bfQu\u00e9 es la materia oscura?",
+        "respuesta": "Una forma de materia que no emite luz y compone gran parte del universo.",
+        "peso": 0
+    },
+    {
+        "pregunta": "29. \u00bfQu\u00e9 se utiliza para medir la distancia en el espacio?",
+        "respuesta": "A\u00f1os luz.",
+        "peso": 0
+    },
+    {
+        "pregunta": "30. \u00bfCu\u00e1l es la diferencia entre una estrella y un planeta?",
+        "respuesta": "Las estrellas emiten su propia luz, mientras que los planetas reflejan la luz de las estrellas.",
+        "peso": 0
+    },
+    {
+        "pregunta": "31. \u00bfQu\u00e9 es un pulsar?",
+        "respuesta": "Una estrella de neutrones que emite radiaci\u00f3n en pulsos.",
+        "peso": 0
+    },
+    {
+        "pregunta": "32. \u00bfQu\u00e9 es el Horizonte de Sucesos?",
+        "respuesta": "La frontera en un agujero negro m\u00e1s all\u00e1 de la cual nada puede escapar.",
+        "peso": 0
+    }
+]
