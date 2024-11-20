@@ -1,209 +1,165 @@
 import pygame
-import threading
+import json
 import time
 import random
+import subprocess
 
-# Inicializar Pygame y el módulo de sonido
-pygame.init()
-pygame.mixer.init()
+# Cargar el contenido del archivo JSON
+with open('preguntas_bosques.json', 'r') as file:
+    preguntas_bosques = json.load(file)
 
-# Cargar y reproducir la música de fondo
-pygame.mixer.music.load("bosque.mp3")
-pygame.mixer.music.play(-1)
-pygame.mixer.music.set_volume(0.3)
+class NodoPregunta:
+    def __init__(self, pregunta, respuesta, peso):
+        self.pregunta = pregunta
+        self.respuesta = respuesta
+        self.peso = peso
+        self.izquierda = None
+        self.derecha = None
 
-# Configuración de la pantalla
-screen_info = pygame.display.Info()
-screen_width = screen_info.current_w
-screen_height = screen_info.current_h
+    def actualizar_peso(self, correcta):
+        if correcta:
+            if self.peso > 0:
+                self.peso -= 1  # Restar 1 solo si el peso es mayor a 1
+        else:
+            self.peso += 1  # Incrementar 1 si la respuesta es incorrecta
 
-ANCHO, ALTO = 1550, 700
-ventana = pygame.display.set_mode((ANCHO, ALTO))
+class ArbolPreguntas:
+    def __init__(self, preguntas):       #preguntas es la lista de diccionarios, 
+        self.preguntas = sorted(preguntas, key=lambda x: x['peso']) #key=lambda x: x['peso']: toma del diccionario x y devielve el valor de la clave # Ordenar preguntas por peso
+        self.raiz = self.construir_arbol(0, len(self.preguntas) - 1)
 
-# Fondo
-fondo = pygame.image.load("bosque.jpg")
-fondo = pygame.transform.scale(fondo, (ANCHO, ALTO))
+    
+    def construir_arbol(self, inicio, fin):
+        if inicio > fin:
+            return None
 
+        # El nodo raíz tiene el menor peso (en la posición inicio)
+        nodo_actual = NodoPregunta(self.preguntas[inicio]['pregunta'],
+                                   self.preguntas[inicio]['respuesta'],
+                                   self.preguntas[inicio]['peso'])
+        
+        # El siguiente nodo de menor peso será el hijo izquierdo
+        if inicio + 1 <= fin:
+            nodo_actual.izquierda = self.construir_arbol(inicio + 1, (inicio + fin) // 2)
+        
+        # El siguiente nodo de mayor peso será el hijo derecho
+        if (inicio + fin) // 2 + 1 <= fin:
+            nodo_actual.derecha = self.construir_arbol((inicio + fin) // 2 + 1, fin)
 
-# Cargar la imagen del ícono
-icon = pygame.image.load("conejo.ico")
-pygame.display.set_icon(icon)
-pygame.display.set_caption("Scape The Quest")
+        return nodo_actual
+    
+    def jugar(self):
+        pygame.init()
+        CELESTE = (173, 216, 230)
+        ANCHO, ALTO = 1300, 650
+        ventana = pygame.display.set_mode((ANCHO, ALTO))
+        pygame.display.set_caption("Juego de Preguntas")
+        clock = pygame.time.Clock()
+        font = pygame.font.Font(None, 40)
 
-# Cargar la imagen del jugador
-image_jugador = pygame.image.load("conejo.png")
-image_jugador_rect = image_jugador.get_rect()
-image_jugador = pygame.transform.scale(image_jugador, (40, 40))
-image_jugador_rect.topleft = (screen_width // 2, screen_height // 2)
+        nodo = self.raiz
+        respuesta_usuario = ""
+        cursor_visible = True
+        ultimo_cambio_cursor = time.time()
+        preguntas_respuestas = 0  
+        correctas = 0
+        incorrectas = 0     
 
-# Cargar la imagen de los obstáculos
-image = pygame.image.load('tronco.png')
-image = pygame.transform.scale(image, (100, 40))
-
-# Crear los rectángulos de los tres obstáculos y posicionarlos
-def crear_obstaculos():
-    obstaculos = []
-    for i in range(5):
-        image_rect = image.get_rect()
-        image_rect.y = screen_height // 3 - (150 - (i * 90))  # Posicionar cada tronco
-        obstaculos.append(image_rect)
-    return obstaculos
-
-obstaculos = crear_obstaculos()
-
-# Variables de movimiento
-move_speed_1 = 2
-move_speed_2 = 5  # Velocidad diferente para el segundo tronco
-move_speed_3 = 4  # Velocidad diferente para el tercer tronco
-move_speed_4 = 7
-move_speed_5 = 6
-
-moving_right_1 = True  # Dirección inicial para el primer tronco
-moving_right_2 = False  # Dirección inicial para el segundo tronco
-moving_right_3 = True   # Dirección inicial para el tercer tronco
-moving_right_4 = False
-moving_right_5 = True
-pause = False
-
-# Función para mover los troncos
-def move_obstacles():
-    global moving_right_1, moving_right_2, moving_right_3, moving_right_4, moving_right_5, obstaculos, pause
-    while True:
-        if not pause:
-            # Mover el primer tronco
-            if moving_right_1:
-                obstaculos[0].x += move_speed_1
-                if obstaculos[0].right >= screen_width:
-                    moving_right_1 = False
-            else:
-                obstaculos[0].x -= move_speed_1
-                if obstaculos[0].left <= 0:
-                    moving_right_1 = True
-
-            # Mover el segundo tronco en dirección opuesta al primero
-            if moving_right_2:
-                obstaculos[1].x += move_speed_2  # Mover hacia la derecha
-                if obstaculos[1].right >= screen_width:
-                    moving_right_2 = False
-            else:
-                obstaculos[1].x -= move_speed_2  # Mover hacia la izquierda
-                if obstaculos[1].left <= 0:
-                    moving_right_2 = True
-
-            # Mover el tercer tronco en la misma dirección que el primero
-            if moving_right_3:
-                obstaculos[2].x += move_speed_3
-                if obstaculos[2].right >= screen_width:
-                    moving_right_3 = False
-            else:
-                obstaculos[2].x -= move_speed_3
-                if obstaculos[2].left <= 0:
-                    moving_right_3 = True
+        def mostrar_pregunta(mensaje=None):
+            ventana.fill(CELESTE)
             
-            if moving_right_4:
-                obstaculos[3].x += move_speed_4
-                if obstaculos[3].right >= screen_width:
-                    moving_right_4 = False
-            else:
-                obstaculos[3].x -= move_speed_4
-                if obstaculos[3].left <= 0:
-                    moving_right_4 = True
+            # Mostrar la pregunta
+            pregunta_texto = font.render(f"Pregunta: {nodo.pregunta}", True, (255, 255, 255))
+            ventana.blit(pregunta_texto, (ANCHO // 2 - pregunta_texto.get_width() // 2, 150))
+            
+            # Mostrar la caja de texto para la respuesta del usuario
+            rect_input = pygame.Rect(ANCHO // 2 - 200, 300, 400, 50)
+            pygame.draw.rect(ventana, (255, 255, 255), rect_input, 2)
+            texto_mostrar = respuesta_usuario + ("|" if cursor_visible else "")
+            texto_render = font.render(texto_mostrar, True, (0, 0, 0))
+            ventana.blit(texto_render, (rect_input.x + 10, rect_input.y + 10))
+        
+            # Mostrar mensaje adicional (si hay alguno) debajo de la caja de respuesta
+            if mensaje:
+                # Dividir el mensaje en líneas si contiene saltos de línea
+                lineas = mensaje.split('\n')
+                for i, linea in enumerate(lineas):
+                    color = (255, 0, 0) if "incorrecta" in mensaje else (0, 255, 0)
+                    mensaje_texto = font.render(linea, True, color)
+                    ventana.blit(mensaje_texto, (ANCHO // 2 - mensaje_texto.get_width() // 2, 400 + i * 40))
 
-            if moving_right_5:
-                obstaculos[4].x += move_speed_5
-                if obstaculos[4].right >= screen_width:
-                    moving_right_5 = False
-            else:
-                obstaculos[4].x -= move_speed_5
-                if obstaculos[4].left <= 0:
-                    moving_right_5 = True
+            pygame.display.flip()
+        
+        while preguntas_respuestas < 5 and nodo is not None:
+            mostrar_pregunta()
+        
+            for evento in pygame.event.get():
+                if evento.type == pygame.QUIT:
+                    pygame.quit()
+                    return
+                elif evento.type == pygame.KEYDOWN:
+                    if evento.key == pygame.K_BACKSPACE:
+                        respuesta_usuario = respuesta_usuario[:-1]
+                    elif evento.key == pygame.K_RETURN:
+                        # Comprobar si la respuesta es correcta
+                        correcta = respuesta_usuario.strip().lower() == nodo.respuesta.strip().lower()
+                        if correcta:
+                            mensaje = "Respuesta correcta!"
+                            correctas += 1
+                            #import bosque_nivel1
+                            #bosque_nivel1()
+                        else:
+                            mensaje = f"Respuesta incorrecta.\nLa respuesta correcta es: {nodo.respuesta}"
+                            incorrectas += 1
+                            #import bosque_nivel2
+                            #bosque_nivel2()
+        
+                        # Mostrar el mensaje en la ventana por 2 segundos
+                        mostrar_pregunta(mensaje)
+                        pygame.time.delay(3000)  # Esperar 2 segundos
+        
+                        # Actualizar el peso de la pregunta
+                        nodo.actualizar_peso(correcta)
+                        for pregunta in self.preguntas:
+                            if pregunta['pregunta'] == nodo.pregunta:
+                                pregunta['peso'] = nodo.peso
+                                break
+                            
+                        # Preparar para la siguiente pregunta
+                        preguntas_respuestas += 1
+                        respuesta_usuario = ""
+                        nodo = nodo.izquierda if correcta else nodo.derecha
+                    else:
+                        respuesta_usuario += evento.unicode
+        
+            # Parpadeo del cursor
+            if time.time() - ultimo_cambio_cursor > 0.5:
+                cursor_visible = not cursor_visible
+                ultimo_cambio_cursor = time.time()
+        
+            clock.tick(30)
+        ventana.fill((0, 0, 0))
+        resultado_texto = font.render(f"Correctas: {correctas} - Incorrectas: {incorrectas}", True, (255, 255, 255))
+        ventana.blit(resultado_texto, (ANCHO // 2 - resultado_texto.get_width() // 2, ALTO // 2))
+        pygame.display.flip()
+        pygame.time.delay(3000)
 
-            # Tiempo de pausa variable
-            time.sleep(random.uniform(0.01, 0.03))  # Pausa aleatoria entre 10ms y 30ms
+        with open("preguntas_bosques.json", "w") as file:
+            json.dump(self.preguntas, file, indent=4)
 
-# Crear y comenzar el hilo para mover los obstáculos
-move_thread = threading.Thread(target=move_obstacles)
-move_thread.daemon = True
-move_thread.start()
+        modos_juego = ["ciudad", "mar", "montaña", "espacio"]
+        modo_seleccionado = random.choice(modos_juego)
+        if modo_seleccionado == "ciudad":
+            subprocess.Popen(["python", "ciudad_nivel1.py"])
+        elif modo_seleccionado == "mar":
+            subprocess.Popen(["python", "mar_nivel1.py"])
+        elif modo_seleccionado == "montana":
+            subprocess.Popen(["python", "montana_nivel1.py"])
+        elif modo_seleccionado == "espacio":
+            subprocess.Popen(["python", "espacio_nivel1.py"])
 
-# Función para reiniciar el juego
-def reiniciar_juego():
-    global image_jugador_rect, obstaculos, moving_right_1, moving_right_2, moving_right_3, moving_right_4, moving_right_5
-    image_jugador_rect.topleft = (screen_width // 2, screen_height // 2)  # Reiniciar posición del jugador
-    obstaculos = crear_obstaculos()  # Reiniciar obstáculos
-    moving_right_1 = True
-    moving_right_2 = False
-    moving_right_3 = True
-    moving_right_4 = False
-    moving_right_5 = True
+        pygame.quit()
 
-# Bucle principal de Pygame
-running = True
-perdiendo = False
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-        elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_ESCAPE:
-                running = False
-            if event.key == pygame.K_p:
-                pause = not pause
-                if pause:
-                    pygame.mixer.music.set_volume(0.1)
-                else:
-                    pygame.mixer.music.set_volume(0.3)
-            if perdiendo and event.key == pygame.K_r:  # Reiniciar al presionar "R"
-                reiniciar_juego()
-                perdiendo = False  # Cambiar el estado a no perdiendo
-
-    # Obtener el estado de todas las teclas
-    keys = pygame.key.get_pressed()
-
-    # Mover el jugador
-    if keys[pygame.K_LEFT]:
-        image_jugador_rect.x -= move_speed_1
-    if keys[pygame.K_RIGHT]:
-        image_jugador_rect.x += move_speed_1
-    if keys[pygame.K_UP]:
-        image_jugador_rect.y -= move_speed_1
-    if keys[pygame.K_DOWN]:
-        image_jugador_rect.y += move_speed_1
-
-    # Evitar que el jugador salga de la pantalla
-    if image_jugador_rect.left < 0:
-        image_jugador_rect.left = 0
-    if image_jugador_rect.right > screen_width:
-        image_jugador_rect.right = screen_width
-    if image_jugador_rect.top < 0:
-        image_jugador_rect.top = 0
-    if image_jugador_rect.bottom > screen_height:
-        image_jugador_rect.bottom = screen_height
-
-    # Verificar colisiones
-    if any(obstacle.colliderect(image_jugador_rect) for obstacle in obstaculos):
-        perdiendo = True  # Cambiar el estado a perdiendo
-
-    # Dibujar el fondo
-    ventana.blit(fondo, (0, 0))  # Dibujar el fondo en la posición (0, 0)
-
-    if perdiendo:
-        # Si ha perdido, muestra un mensaje o cambia el fondo
-        font = pygame.font.Font(None, 74)
-        text = font.render("¡Perdiste! Presiona 'R' para reiniciar", True, (255, 0, 0))
-        ventana.blit(text, (screen_width // 2 - text.get_width() // 2, screen_height // 2 - text.get_height() // 2))
-    else:
-        # Dibujar los obstáculos y el jugador
-        for obstaculo in obstaculos:
-            ventana.blit(image, obstaculo)
-        ventana.blit(image_jugador, image_jugador_rect)
-
-    # Actualizar la pantalla
-    pygame.display.flip()
-
-    # Controlar el framerate
-    pygame.time.Clock().tick(60)
-
-
-# Salir de Pygame
-pygame.quit()
+# Ejecutar la función para crear el árbol y jugar
+arbol = ArbolPreguntas(preguntas_bosques)
+arbol.jugar()
