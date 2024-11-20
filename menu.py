@@ -6,7 +6,7 @@ import sys
 pygame.init()
 
 # Configuración de la ventana
-ANCHO, ALTO = 1500, 800
+ANCHO, ALTO = 1300, 650
 ventana = pygame.display.set_mode((ANCHO, ALTO))
 pygame.display.set_caption("Trivia Challenge")
 
@@ -26,6 +26,20 @@ fuente = pygame.font.Font(None, 40)
 
 # Definir botones
 def dibujar_boton(texto, x, y, ancho, alto, color_normal, color_hover, accion=None):
+    """Dibuja un botón interactivo en la pantalla y ejecuta una acción cuando se hace clic en él.
+
+    Args:
+         texto (str): El texto que se mostrará en el botón.
+        x (int): La coordenada x de la esquina superior izquierda del botón.
+        y (int): La coordenada y de la esquina superior izquierda del botón.
+        ancho (int): El ancho del botón.
+        alto (int): El alto del botón.
+        color_normal (tuple): Color del botón cuando el mouse no está sobre él, en formato RGB.
+        color_hover (tuple): Color del botón cuando el mouse está sobre él, en formato RGB.
+        accion (callable, opcional): Función a ejecutar cuando se hace clic en el botón.
+    
+    Returns: None.
+    """
     mouse = pygame.mouse.get_pos()
     click = pygame.mouse.get_pressed()
 
@@ -45,13 +59,33 @@ def dibujar_boton(texto, x, y, ancho, alto, color_normal, color_hover, accion=No
 
 # Acciones de los botones
 def jugar():
+    """Llama a el archivo 'nombre' para iniciar una nueva partida del juego.
+
+    Args:
+        None
+
+    Returns: None.
+    """
     import nombre
 
 def cargar_juego():
+    """Carga el estado guardado de una partida anterior.
+
+    Args:
+        None
+
+    Returns: None
+    """
     print("Cargar juego")
     # Aquí puedes agregar la lógica para cargar el juego guardado
 
 def salir():
+    """Cierra el juego de forma segura.
+    Args:
+        None
+
+    Returns: None.
+    """
     pygame.quit()
     sys.exit()
 
@@ -66,12 +100,9 @@ while corriendo:
     ventana.blit(fondo, (0, 0))
 
     # Dibujar botones
-    dibujar_boton("Jugar", 610, 200, 200, 50, VERDE, (0, 255, 0), jugar)
-    dibujar_boton("Cargar Juego", 610, 300, 200, 50, VERDE, (0, 0, 255), cargar_juego)
-    dibujar_boton("Salir", 610, 400, 200, 50, VERDE, (255, 0, 0), salir)
+    dibujar_boton("Jugar", 525, 200, 200, 50, VERDE, (0, 255, 0), jugar)
+    dibujar_boton("Cargar Juego", 525, 300, 200, 50, VERDE, (0, 0, 255), cargar_juego)
+    dibujar_boton("Salir", 525, 400, 200, 50, VERDE, (255, 0, 0), salir)
 
     # Actualizar la pantalla
     pygame.display.update()
-
-# Finalizar Pygame
-pygame.quit()
